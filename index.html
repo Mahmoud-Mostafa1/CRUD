@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Open+Sans:wght@400;700&family=Tajawal:wght@200;300;400;700;800&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<style>
+    body {
+        font-family: 'Tajawal', sans-serif;
+    }
+
+    .tasks-table {
+        width: 60%;
+        /* height: 500px; */
+        background-color: rgb(239, 239, 239);
+        margin-top: 10px
+    }
+
+    button.circular {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        line-height: 0;
+    }
+
+    button {
+        border: none;
+        font-size: 20px;
+        box-shadow: 0px 3px 5px 0px rgba(168, 168, 168, 0.38);
+    }
+
+    .task {
+        display: flex;
+        background-color: white;
+        padding: 4px;
+        border-bottom: solid black 1px;
+        overflow: hidden;
+        transition: box-shadow 0.3s
+    }
+
+
+
+    .done {
+        background-color: rgb(158, 253, 156);
+    }
+
+
+
+    @media(min-width:768px) {
+        .circulars {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 20%;
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media(max-width:767px) {
+        .task {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .date span {
+            display: block;
+
+        }
+    }
+
+    .task:hover {
+        box-shadow: 0 3px 15px rgba(79, 79, 79, 0.843);
+    }
+</style>
+
+<body style="background-color: rgb(30, 0, 77);">
+
+    <div style="display: flex; justify-content: center; align-items: center;direction: rtl;">
+        <div class="tasks-table">
+            <div
+                style="width:100%; text-align: center; background: rgb(92, 52, 155); color: white; padding-top:8px; padding-bottom:8px;">
+                <h1 style="display: inline;">مهامي</h1>
+                <button id="add-btn" class="circular"
+                    style="float: right; background-color: white; margin-right: 10px;"><span
+                        class="material-symbols-outlined">
+                        add
+                    </span></button>
+            </div>
+            <div id="tasks" style="padding: 20px;">
+
+                <div class="task">
+                    <div style="width: 70%;">
+                        <h2>قراءة كتاب</h2>
+                        <div class="date">
+                            <span class="material-symbols-outlined">
+                                event
+                            </span>
+                            <span>10/10/2030</span>
+
+                        </div>
+                    </div>
+
+                    <div class="circulars">
+                        <button class="circular" style="background-color: rgb(114, 0, 0);color: white;"><span
+                                class="material-symbols-outlined">
+                                delete
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0,150, 30);color: white;"><span
+                                class="material-symbols-outlined">
+                                check
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0, 16, 197,0.692);color: white;"><span
+                                class="material-symbols-outlined">
+                                edit
+                            </span></button>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div style="width: 70%;">
+                        <h2>قراءة كتاب</h2>
+                        <div class="date">
+                            <span class="material-symbols-outlined">
+                                event
+                            </span>
+                            <span>10/10/2030</span>
+
+                        </div>
+                    </div>
+
+                    <div class="circulars">
+                        <button class="circular" style="background-color: rgb(114, 0, 0);color: white;"><span
+                                class="material-symbols-outlined">
+                                delete
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0,150, 30);color: white;"><span
+                                class="material-symbols-outlined">
+                                check
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0, 16, 197,0.692);color: white;"><span
+                                class="material-symbols-outlined">
+                                edit
+                            </span></button>
+                    </div>
+                </div>
+                <div class="task">
+                    <div style="width: 70%;">
+                        <h2>قراءة كتاب</h2>
+                        <div class="date">
+                            <span class="material-symbols-outlined">
+                                event
+                            </span>
+                            <span>10/10/2030</span>
+
+                        </div>
+                    </div>
+
+                    <div class="circular">
+                        <button class="circular" style="background-color: rgb(114, 0, 0);color: white;"><span
+                                class="material-symbols-outlined">
+                                delete
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0,150, 30);color: white;"><span
+                                class="material-symbols-outlined">
+                                check
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0, 16, 197,0.692);color: white;"><span
+                                class="material-symbols-outlined">
+                                edit
+                            </span></button>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div style="width: 70%;">
+                        <h2>قراءة كتاب</h2>
+                        <div class="date">
+                            <span class="material-symbols-outlined">
+                                event
+                            </span>
+                            <span>10/10/2030</span>
+
+                        </div>
+                    </div>
+
+                    <div class="circulars">
+                        <button class="circular" style="background-color: rgb(114, 0, 0);color: white;"><span
+                                class="material-symbols-outlined">
+                                delete
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0,150, 30);color: white;"><span
+                                class="material-symbols-outlined">
+                                check
+                            </span></button>
+                        <button class="circular" style="background-color: rgb(0, 16, 197,0.692);color: white;"><span
+                                class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    let tasks = [
+        {
+            "title": "قراءة كتاب ",
+            "date": "15/10/230",
+            "isDone": true
+        }, {
+            "title": "انهاء المشروع النهائي",
+            "date": "15/10/230",
+            "isDone": false
+        }, {
+            "title": "انهاء كورس الجافاسكريبت",
+            "date": "15/10/230",
+            "isDone": false
+        }, {
+            "title": "حل التحدي",
+            "date": "15/10/230",
+            "isDone": true
+        },
+    ]
+    if (localStorage.getItem("tasks")) {
+        tasks = JSON.parse(localStorage.getItem("tasks"))
+
+    }
+    function fillTaskOnThePage() {
+        document.getElementById("tasks").innerHTML = ""
+        let index = 0;
+        for (task of tasks) {
+            content = `    <div class="task ${task.isDone ? 'done' : ''}">
+                    <div style="width: 70%;">
+                        <h2>${task.title}</h2>
+                        <div class="date">
+                            <span class="material-symbols-outlined">
+                                event
+                            </span>
+                            <span>${task.date}</span>
+                        </div>
+                    </div>
+
+                    <div class="circulars">
+                        <button onclick="deleteTask(${index})" class="circular"
+                            style="background-color: rgb(114, 0, 0);color: white;"><span
+                                class="material-symbols-outlined">
+                                delete
+                            </span></button>
+                        ${task.isDone ? `<button onclick="ToggleTask(${index})" class="circular"
+                            style="background-color: rgb(0,150, 30);color: white;"><span
+                                class="material-symbols-outlined">
+                                done </span>`: `<button onclick="ToggleTask(${index})" class="circular"
+                                style="background-color: rgb(118,0, 101);color: white;"><span
+                                    class="material-symbols-outlined">
+                                    cancel </span>`
+                }
+                                </span></button>
+                            <button onclick="editTask(${index})" class="circular"
+                                style="background-color: rgb(0, 16, 197,0.692);color: white;"><span
+                                    class="material-symbols-outlined">
+                                    edit
+                                </span>
+                            </button>
+                    </div>
+                </div>`
+            document.getElementById("tasks").innerHTML += content
+            index++
+        }
+    }
+    fillTaskOnThePage()
+    document.getElementById("add-btn").onclick = function () {
+
+        let now = new Date()
+        let date = now.getHours() + ":" + now.getMinutes() + " | " + now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear()
+        taskName = prompt("الرجاء ادخال عنوان المهمة", "الرجاء ادخال عنوان المهمة")
+        taskObj = {
+            "title": taskName,
+            "date": date,
+            "isDone": false
+        }
+        if (taskName) {
+            tasks.push(taskObj)
+            storeTasks()
+            fillTaskOnThePage()
+        }
+
+    }
+    function deleteTask(index) {
+        let task = tasks[index]
+        let conf = confirm("هل انت متأكد من حذف مهمة" + `  "${task.title}"` + " ؟")
+        if (conf == true) {
+            tasks.splice(index, 1)
+            storeTasks()
+            fillTaskOnThePage()
+        }
+    }
+    function editTask(index) {
+        let newTitle = prompt("الرجاء تحديد عنوان المهمة الجديد", task.title)
+        if (newTitle) {
+            task = tasks[index]
+            task.title = newTitle
+            console.log(newTitle);
+            storeTasks()
+            fillTaskOnThePage()
+        }
+    }
+
+    function ToggleTask(index) {
+        let task = tasks[index]
+        task.isDone = !task.isDone
+        storeTasks()
+        fillTaskOnThePage()
+    }
+    function storeTasks() {
+        let taskString = JSON.stringify(tasks)
+        localStorage.setItem("tasks", taskString)
+    }
+
+</script>
+
+</html>
